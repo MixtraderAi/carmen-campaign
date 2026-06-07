@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coffeeGlow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#c19a6b" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#c19a6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #d4d4d8; font-weight: 600; font-family: Inter, Arial, sans-serif; }
+      .micro { font-size: 15px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .chip { font-size: 16px; font-weight: 700; letter-spacing: .08em; font-family: Inter, Arial, sans-serif; }
+    </style>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    </marker>
+    <marker id="arrowCoffee" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c19a6b" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="#09090b"/>
+  <rect width="1200" height="800" rx="34" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="800" rx="34" fill="url(#coffeeGlow)"/>
+  <text x="70" y="72" font-size="38" fill="#ffffff" class="title">Briefing vs Live Technical Training</text>
+  <text x="70" y="106" font-size="22" fill="#a1a1aa" font-family="Inter, Arial, sans-serif">A briefing explains the result. Training teaches every step.</text>
+<rect x="80" y="180" width="500" height="470" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#22d3ee" stroke-opacity="0.72" filter="url(#softShadow)"/><rect x="620" y="180" width="500" height="470" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#c19a6b" stroke-opacity="0.72" filter="url(#softShadow)"/><text x="330" y="240" font-size="34" fill="#fff" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Briefing</text><circle cx="330" cy="330" r="58" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-width="3"/><path d="M330 294 V330 L360 348" stroke="#22d3ee" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <rect x="225" y="410" width="210" height="44" rx="22.0" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.45"/>
+    <text x="330.0" y="438.0" class="chip" fill="#22d3ee" text-anchor="middle">30 MIN SUMMARY</text>
+    <text x="330" y="500" font-size="21" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">what was done</text>
+<text x="330" y="528" font-size="21" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">next steps</text>
+<text x="330" y="556" font-size="21" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">result review</text><text x="870" y="240" font-size="34" fill="#fff" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Live Training</text><rect x="790" y="285" width="160" height="105" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="3"/><circle cx="775" cy="270" r="24" fill="#c19a6b" fill-opacity="0.14" stroke="#c19a6b" stroke-width="2"/><text x="775" y="278" font-size="24" fill="#c19a6b" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">?</text><circle cx="958" cy="275" r="24" fill="#c19a6b" fill-opacity="0.14" stroke="#c19a6b" stroke-width="2"/><text x="958" y="283" font-size="24" fill="#c19a6b" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">?</text><circle cx="775" cy="410" r="24" fill="#c19a6b" fill-opacity="0.14" stroke="#c19a6b" stroke-width="2"/><text x="775" y="418" font-size="24" fill="#c19a6b" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">?</text><circle cx="962" cy="415" r="24" fill="#c19a6b" fill-opacity="0.14" stroke="#c19a6b" stroke-width="2"/><text x="962" y="423" font-size="24" fill="#c19a6b" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">?</text><text x="870" y="500" font-size="21" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">teach every button</text>
+<text x="870" y="528" font-size="21" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">live troubleshooting</text>
+<text x="870" y="556" font-size="21" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">repeat on examples</text><text x="600" y="720" font-size="28" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Included: briefing. Not included: open-ended live training.</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coffeeGlow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#c19a6b" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#c19a6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #d4d4d8; font-weight: 600; font-family: Inter, Arial, sans-serif; }
+      .micro { font-size: 15px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .chip { font-size: 16px; font-weight: 700; letter-spacing: .08em; font-family: Inter, Arial, sans-serif; }
+    </style>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    </marker>
+    <marker id="arrowCoffee" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c19a6b" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="#09090b"/>
+  <rect width="1200" height="800" rx="34" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="800" rx="34" fill="url(#coffeeGlow)"/>
+  <text x="70" y="72" font-size="38" fill="#ffffff" class="title">AED 350 vs AED 450 YouTube Upload</text>
+  <text x="70" y="106" font-size="22" fill="#a1a1aa" font-family="Inter, Arial, sans-serif">Different source material = different checking and packaging work.</text>
+<rect x="90" y="175" width="470" height="470" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#22d3ee" stroke-opacity="0.72" filter="url(#softShadow)"/><rect x="640" y="175" width="470" height="470" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#c19a6b" stroke-opacity="0.72" filter="url(#softShadow)"/><text x="325" y="230" font-size="28" fill="#fff" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">UniFilms-Produced Video</text>
+    <rect x="270" y="282" width="110" height="76" rx="16" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-width="3"/>
+    <path d="M313,298 L353,320 L313,342 Z" fill="#22d3ee" fill-opacity="0.85"/>
+    
+    <rect x="180" y="405" width="290" height="72" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    
+    <text x="325.0" y="449.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Already in workflow</text>
+    <path d="M325,485 L325,535" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/>
+    <rect x="215" y="550" width="220" height="48" rx="24.0" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.45"/>
+    <text x="325.0" y="580.0" class="chip" fill="#22d3ee" text-anchor="middle">AED 350 / VIDEO</text>
+    <text x="325" y="630" font-size="18" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">We know the style,</text>
+<text x="325" y="658" font-size="18" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">edit, context, and material.</text><text x="875" y="230" font-size="28" fill="#fff" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">Client-Provided Video</text>
+    <rect x="750" y="282" width="110" height="76" rx="16" fill="#c19a6b" fill-opacity="0.12" stroke="#c19a6b" stroke-width="3"/>
+    <path d="M793,298 L833,320 L793,342 Z" fill="#c19a6b" fill-opacity="0.85"/>
+    <text x="950" y="328" font-size="56" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">?</text>
+    <rect x="730" y="405" width="290" height="72" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="875.0" y="449.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Check + adapt + package</text>
+    <path d="M875,485 L875,535" stroke="#c19a6b" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCoffee)"/>
+    <rect x="765" y="550" width="220" height="48" rx="24.0" fill="#c19a6b" fill-opacity="0.12" stroke="#c19a6b" stroke-opacity="0.45"/>
+    <text x="875.0" y="580.0" class="chip" fill="#c19a6b" text-anchor="middle">AED 450 / VIDEO</text>
+    <text x="875" y="630" font-size="18" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">External file needs</text>
+<text x="875" y="658" font-size="18" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">more checking and adaptation.</text>
+</svg>

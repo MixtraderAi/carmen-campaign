@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coffeeGlow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#c19a6b" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#c19a6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #d4d4d8; font-weight: 600; font-family: Inter, Arial, sans-serif; }
+      .micro { font-size: 15px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .chip { font-size: 16px; font-weight: 700; letter-spacing: .08em; font-family: Inter, Arial, sans-serif; }
+    </style>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    </marker>
+    <marker id="arrowCoffee" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c19a6b" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="#09090b"/>
+  <rect width="1200" height="800" rx="34" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="800" rx="34" fill="url(#coffeeGlow)"/>
+  <text x="70" y="72" font-size="38" fill="#ffffff" class="title">Before / During / After Workflow</text>
+  <text x="70" y="106" font-size="22" fill="#a1a1aa" font-family="Inter, Arial, sans-serif">We agree on the goal, we set it up, then we report back clearly.</text>
+<rect x="100" y="230" width="290" height="300" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#c19a6b" stroke-opacity="0.72" filter="url(#softShadow)"/><text x="245" y="300" font-size="58" fill="#c19a6b" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">01</text><text x="245" y="365" font-size="32" fill="#fff" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Before</text><text x="245" y="420" font-size="19" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">Goal</text>
+<text x="245" y="448" font-size="19" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">materials</text>
+<text x="245" y="476" font-size="19" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">budget</text><rect x="455" y="230" width="290" height="300" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#22d3ee" stroke-opacity="0.72" filter="url(#softShadow)"/><text x="600" y="300" font-size="58" fill="#22d3ee" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">02</text><text x="600" y="365" font-size="32" fill="#fff" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">During</text><text x="600" y="420" font-size="19" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">UniFilms completes setup</text><rect x="810" y="230" width="290" height="300" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#c19a6b" stroke-opacity="0.72" filter="url(#softShadow)"/><text x="955" y="300" font-size="58" fill="#c19a6b" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">03</text><text x="955" y="365" font-size="32" fill="#fff" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">After</text><text x="955" y="420" font-size="19" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">Summary</text>
+<text x="955" y="448" font-size="19" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">next steps</text><path d="M392,380 L447,380" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/><path d="M747,380 L802,380" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/><text x="600" y="660" font-size="30" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">No need to sit together during technical setup</text>
+</svg>

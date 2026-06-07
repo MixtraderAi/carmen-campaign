@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coffeeGlow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#c19a6b" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#c19a6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #d4d4d8; font-weight: 600; font-family: Inter, Arial, sans-serif; }
+      .micro { font-size: 15px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .chip { font-size: 16px; font-weight: 700; letter-spacing: .08em; font-family: Inter, Arial, sans-serif; }
+    </style>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    </marker>
+    <marker id="arrowCoffee" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c19a6b" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="#09090b"/>
+  <rect width="1200" height="800" rx="34" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="800" rx="34" fill="url(#coffeeGlow)"/>
+  <text x="70" y="72" font-size="38" fill="#ffffff" class="title">Our Control vs Market Response</text>
+  <text x="70" y="106" font-size="22" fill="#a1a1aa" font-family="Inter, Arial, sans-serif">We manage the campaign work. We cannot guarantee market response.</text>
+<rect x="90" y="185" width="480" height="465" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#22d3ee" stroke-opacity="0.72" filter="url(#softShadow)"/><rect x="630" y="185" width="480" height="465" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#c19a6b" stroke-opacity="0.72" filter="url(#softShadow)"/><text x="330" y="245" font-size="34" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Our Control</text>
+    <rect x="190" y="295" width="280" height="44" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    
+    <text x="330.0" y="325.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">setup</text>
+    
+    <rect x="190" y="355" width="280" height="44" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    
+    <text x="330.0" y="385.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">packaging</text>
+    
+    <rect x="190" y="415" width="280" height="44" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    
+    <text x="330.0" y="445.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">targeting</text>
+    
+    <rect x="190" y="475" width="280" height="44" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    
+    <text x="330.0" y="505.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">launch</text>
+    
+    <rect x="190" y="535" width="280" height="44" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    
+    <text x="330.0" y="565.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">basic monitoring</text>
+    <text x="870" y="245" font-size="34" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Market Response</text>
+    <rect x="730" y="295" width="280" height="44" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="870.0" y="325.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">leads</text>
+    
+    <rect x="730" y="355" width="280" height="44" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="870.0" y="385.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">views</text>
+    
+    <rect x="730" y="415" width="280" height="44" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="870.0" y="445.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">sale timing</text>
+    
+    <rect x="730" y="475" width="280" height="44" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="870.0" y="505.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">buyer decision</text>
+    
+    <rect x="730" y="535" width="280" height="44" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="870.0" y="565.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">market demand</text>
+    <path d="M590,230 V650" stroke="#3f3f46" stroke-width="2" stroke-dasharray="10 10"/><text x="600" y="720" font-size="27" fill="#fff" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Professional setup improves presentation — results are not guaranteed.</text>
+</svg>

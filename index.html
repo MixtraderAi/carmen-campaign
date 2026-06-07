@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carmen Moubarak | YouTube & Campaign Clarification</title>
+    <meta name="description" content="Scope, Posting, Advertising & Briefing Workflow clarification for Carmen Moubarak by UniFilms.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    zinc: {
+                        950: '#09090b',
+                        900: '#18181b',
+                        800: '#27272a',
+                        700: '#3f3f46',
+                        600: '#52525b',
+                        500: '#71717a',
+                        400: '#a1a1aa',
+                        300: '#d4d4d8',
+                    },
+                    cyan: { 400: '#22d3ee' },
+                    coffee: { DEFAULT: '#c19a6b', light: '#d4b896', dark: '#a07d56' },
+                },
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                    serif: ['Playfair Display', 'serif'],
+                },
+            }
+        }
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #09090b; color: #d4d4d8; margin: 0; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #09090b; }
+        ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
+
+        /* Glass cards */
+        .card-glass {
+            background: rgba(24,24,27,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(63,63,70,0.5);
+            border-radius: 1.5rem;
+            will-change: transform;
+            transform: translateZ(0);
+        }
+        .sidebar-glass {
+            background: rgba(24,24,27,0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-right: 1px solid rgba(63,63,70,0.4);
+        }
+
+        /* Reduce blur on mobile for performance */
+        @media (max-width: 768px) {
+            .card-glass {
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+                background: rgba(24,24,27,0.92);
+            }
+            .sidebar-glass {
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+                background: rgba(24,24,27,0.95);
+            }
+            .mobile-nav {
+                backdrop-filter: blur(8px) !important;
+                -webkit-backdrop-filter: blur(8px) !important;
+            }
+        }
+
+        /* Glows */
+        .bg-glow-cyan {
+            background: radial-gradient(ellipse 600px 400px at 20% 50%, rgba(34,211,238,0.06) 0%, transparent 70%);
+        }
+        .bg-glow-coffee {
+            background: radial-gradient(ellipse 600px 400px at 80% 50%, rgba(193,154,107,0.06) 0%, transparent 70%);
+        }
+
+        /* Active tab */
+        .active-tab {
+            background: rgba(34,211,238,0.1);
+            border-color: rgba(34,211,238,0.3);
+            color: #22d3ee;
+        }
+
+        /* Fade in */
+        .fade-in {
+            opacity: 0;
+            transform: translate3d(0, 20px, 0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            will-change: opacity, transform;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+        @media (max-width: 768px) {
+            .fade-in {
+                transform: translate3d(0, 12px, 0);
+                transition: opacity 0.35s ease, transform 0.35s ease;
+            }
+        }
+
+        /* Smooth scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Stop line */
+        .stop-line {
+            position: relative;
+            padding: 0.75rem 1.5rem;
+            background: rgba(239,68,68,0.1);
+            border: 1px solid rgba(239,68,68,0.3);
+            border-radius: 0.75rem;
+            color: #fca5a5;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.8rem;
+        }
+
+        /* Workflow connector */
+        .workflow-connector {
+            width: 2px;
+            height: 24px;
+            background: linear-gradient(to bottom, #22d3ee, transparent);
+            margin: 0 auto;
+        }
+
+        /* Mobile nav */
+        @media (max-width: 1023px) {
+            .desktop-sidebar { display: none; }
+            .mobile-nav { display: flex; }
+            .main-content { margin-left: 0; }
+        }
+        @media (min-width: 1024px) {
+            .desktop-sidebar { display: flex; }
+            .mobile-nav { display: none; }
+            .main-content { margin-left: 260px; }
+        }
+
+        /* FAQ accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+        .faq-answer.open {
+            max-height: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+    const { useState, useEffect, useRef, useCallback } = React;
+
+    /* ─── NAV DATA ─── */
+    const sections = [
+        { id: 'overview',   label: 'Overview',   short: 'Overview',  icon: 'layout-dashboard' },
+        { id: 'youtube',    label: 'YouTube',    short: 'YouTube',   icon: 'play-circle' },
+        { id: 'campaigns',  label: 'Campaign Options', short: 'Ads', icon: 'target' },
+        { id: 'focus',      label: 'Campaign Focus',   short: 'Focus', icon: 'crosshair' },
+        { id: 'monitoring', label: 'Monitoring', short: 'Monitor',   icon: 'bar-chart-3' },
+        { id: 'meetings',   label: 'Meetings',  short: 'Meetings',  icon: 'clock' },
+        { id: 'workflow',   label: 'Next Workflow', short: 'Workflow', icon: 'check-circle-2' },
+        { id: 'faq',        label: 'FAQ',        short: 'FAQ',       icon: 'help-circle' },
+        { id: 'pricing',    label: 'Pricing',    short: 'Pricing',   icon: 'wallet' },
+    ];
+
+    /* ─── REUSABLE COMPONENTS ─── */
+
+    function HeaderBadge({ text, color = 'cyan' }) {
+        const colors = {
+            cyan: 'bg-cyan-400/10 border-cyan-400/20 text-cyan-400',
+            coffee: 'bg-coffee/10 border-coffee/20 text-coffee',
+        };
+        return (
+            <div className={`inline-flex items-center px-4 py-1.5 rounded-full border text-xs font-semibold uppercase tracking-widest ${colors[color]}`}>
+                {text}
+            </div>
+        );
+    }
+
+    function SectionCard({ children, className = '', glow = '' }) {
+        return (
+            <div className={`card-glass p-6 md:p-8 fade-in ${glow} ${className}`}>
+                {children}
+            </div>
+        );
+    }
+
+    function NoteCard({ children, type = 'info' }) {
+        const styles = {
+            info: 'border-cyan-400/30 bg-cyan-400/5',
+            warning: 'border-coffee/30 bg-coffee/5',
+            important: 'border-red-400/30 bg-red-400/5',
+        };
+        return (
+            <div className={`rounded-xl border p-4 mt-4 ${styles[type]}`}>
+                <div className="flex items-start gap-3">
+                    <span className="text-sm leading-relaxed text-zinc-300">{children}</span>
+                </div>
+            </div>
+        );
+    }
+
+    function IncludedList({ items }) {
+        return (
+            <ul className="space-y-2 mt-3">
+                {items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-zinc-300">
+                        <span className="text-cyan-400 mt-0.5 shrink-0">✓</span>
+                        <span>{item}</span>
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
+    function NotIncludedList({ items }) {
+        return (
+            <ul className="space-y-2 mt-3">
+                {items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-zinc-400">
+                        <span className="text-red-400/70 mt-0.5 shrink-0">✕</span>
+                        <span>{item}</span>
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
+    function PriceCard({ title, price, subtitle, included, note, accent = 'cyan' }) {
+        const accentColor = accent === 'cyan' ? 'text-cyan-400' : 'text-coffee';
+        const borderColor = accent === 'cyan' ? 'border-cyan-400/20 hover:border-cyan-400/40' : 'border-coffee/20 hover:border-coffee/40';
+        return (
+            <div className={`card-glass p-6 border ${borderColor} transition-colors`}>
+                <div className="mb-1">
+                    <span className="text-xs uppercase tracking-widest text-zinc-500">{subtitle}</span>
+                </div>
+                <h4 className="font-serif text-xl text-white mb-1">{title}</h4>
+                <p className={`text-2xl font-bold ${accentColor} mb-4`}>{price}</p>
+                {included && <IncludedList items={included} />}
+                {note && <NoteCard type="info">{note}</NoteCard>}
+            </div>
+        );
+    }
+
+    function WorkflowStep({ number, title, text, active = true }) {
+        return (
+            <div className={`flex items-start gap-4 ${!active ? 'opacity-40' : ''}`}>
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-sm font-bold ${active ? 'bg-cyan-400/15 text-cyan-400 border border-cyan-400/30' : 'bg-zinc-800 text-zinc-500 border border-zinc-700'}`}>
+                    {number}
+                </div>
+                <div>
+                    <h4 className={`font-semibold ${active ? 'text-white' : 'text-zinc-500'}`}>{title}</h4>
+                    <p className={`text-sm mt-1 ${active ? 'text-zinc-400' : 'text-zinc-600'}`}>{text}</p>
+                </div>
+            </div>
+        );
+    }
+
+    function ExampleCard({ title, label, positive = true, boxes = 1 }) {
+        const borderBg = positive ? 'border-cyan-400/25 bg-cyan-400/5' : 'border-coffee/25 bg-coffee/5';
+        const boxBg = positive ? 'bg-cyan-400/15 border-cyan-400/40 text-cyan-400' : 'bg-coffee/15 border-coffee/40 text-coffee';
+        const labelColor = positive ? 'text-cyan-400' : 'text-coffee';
+        const statusIcon = positive ? '✓' : '✕';
+        const statusBg = positive ? 'bg-cyan-400/20 text-cyan-400' : 'bg-red-400/20 text-red-400';
+        return (
+            <div className={`rounded-2xl border p-5 ${borderBg} transition-all hover:scale-[1.02]`}>
+                {/* Status badge */}
+                <div className="flex items-center justify-between mb-4">
+                    <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold ${statusBg}`}>{statusIcon}</span>
+                    <span className={`text-xs font-bold uppercase tracking-widest ${labelColor}`}>{boxes === 1 ? '1 Focus' : `${boxes} Focuses`}</span>
+                </div>
+                {/* Box diagram */}
+                <div className="flex items-center justify-center gap-2 mb-4 flex-wrap">
+                    {Array.from({ length: boxes }).map((_, i) => (
+                        <React.Fragment key={i}>
+                            {i > 0 && <span className={`text-xl font-black ${labelColor} mx-1`}>+</span>}
+                            <div className={`w-14 h-14 md:w-16 md:h-16 rounded-xl border-2 flex items-center justify-center text-lg font-black ${boxBg}`}>
+                                <i data-lucide={positive ? 'package' : 'package'} className="w-6 h-6"></i>
+                            </div>
+                        </React.Fragment>
+                    ))}
+                </div>
+                {/* Title */}
+                <p className="text-sm text-white font-semibold text-center leading-snug">{title}</p>
+                <p className={`text-[11px] mt-2 font-semibold uppercase tracking-wider text-center ${labelColor}`}>{label}</p>
+            </div>
+        );
+    }
+
+    function FAQItem({ question, answer, keyLine, example }) {
+        const [open, setOpen] = useState(false);
+        return (
+            <div className="card-glass border border-zinc-800/50 overflow-hidden transition-colors hover:border-zinc-700/60">
+                <button
+                    onClick={() => setOpen(!open)}
+                    className="w-full flex items-center justify-between p-5 text-left cursor-pointer"
+                >
+                    <span className="text-white font-medium pr-4">{question}</span>
+                    <span className={`text-zinc-500 shrink-0 transition-transform ${open ? 'rotate-45' : ''}`} style={{ fontSize: '1.4rem', lineHeight: 1 }}>+</span>
+                </button>
+                <div className={`faq-answer ${open ? 'open' : ''}`} style={{ padding: open ? '0 1.25rem 1.25rem' : '0 1.25rem 0' }}>
+                    <p className="text-sm text-zinc-400 leading-relaxed">{answer}</p>
+                    {example && (
+                        <div className="mt-3 p-3 rounded-lg bg-zinc-900/80 border border-zinc-800 text-sm text-zinc-400">
+                            {example}
+                        </div>
+                    )}
+                    {keyLine && (
+                        <p className="mt-3 text-sm font-semibold text-cyan-400">{keyLine}</p>
+                    )}
+                </div>
+            </div>
+        );
+    }
+
+    /* ─── SIDEBAR ─── */
+    function Sidebar({ active, onNav }) {
+        return (
+            <aside className="desktop-sidebar fixed left-0 top-0 bottom-0 w-[260px] sidebar-glass z-40 flex-col py-8 px-5 overflow-y-auto">
+                <div className="mb-10">
+                    <p className="text-xs uppercase tracking-widest text-coffee font-semibold mb-1">UniFilms</p>
+                    <h1 className="font-serif text-lg text-white leading-snug">Carmen Moubarak</h1>
+                    <p className="text-xs text-zinc-500 mt-1">YouTube & Campaign Clarification</p>
+                </div>
+                <nav className="space-y-1">
+                    {sections.map(s => (
+                        <button
+                            key={s.id}
+                            onClick={() => onNav(s.id)}
+                            className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all cursor-pointer ${active === s.id ? 'active-tab' : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/50'}`}
+                        >
+                            <i data-lucide={s.icon} className="w-4 h-4"></i>
+                            <span>{s.label}</span>
+                        </button>
+                    ))}
+                </nav>
+                <div className="mt-auto pt-8">
+                    <div className="text-xs text-zinc-600 border-t border-zinc-800 pt-4">
+                        Scope • Posting • Advertising<br/>Briefing Workflow
+                    </div>
+                </div>
+            </aside>
+        );
+    }
+
+    /* ─── MOBILE NAV ─── */
+    function MobileNav({ active, onNav }) {
+        return (
+            <nav className="mobile-nav fixed bottom-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-lg border-t border-zinc-800 px-1 py-1 justify-around overflow-x-auto gap-0">
+                {sections.map(s => (
+                    <button
+                        key={s.id}
+                        onClick={() => onNav(s.id)}
+                        className={`flex flex-col items-center justify-center px-2 py-2 min-w-[52px] rounded-lg text-[10px] transition-colors cursor-pointer ${active === s.id ? 'text-cyan-400' : 'text-zinc-500'}`}
+                    >
+                        <i data-lucide={s.icon} className="w-4 h-4 mb-0.5"></i>
+                        <span>{s.short}</span>
+                    </button>
+                ))}
+            </nav>
+        );
+    }
+
+    /* ─── SECTION COMPONENTS ─── */
+
+    function OverviewSection() {
+        return (
+            <section id="overview" className="space-y-8 bg-glow-cyan">
+                <div className="fade-in">
+                    <HeaderBadge text="Clarification Briefing" color="cyan" />
+                    <h2 className="font-serif text-3xl md:text-4xl text-white mt-4 mb-3">Clear Working Structure</h2>
+                    <p className="text-zinc-400 max-w-2xl leading-relaxed">
+                        We want to clarify a few points properly, so we are fully aligned going forward and there is no confusion about YouTube, advertising support, and meetings.
+                    </p>
+                    <p className="text-zinc-400 max-w-2xl leading-relaxed mt-3">
+                        This briefing separates YouTube posting, advertising setup, monthly campaign management, and meeting/briefing workflow so each part is clear and the collaboration stays simple, transparent, and efficient.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    {[
+                        { title: 'YouTube Posting', text: 'Per-video upload and basic packaging only. Not full YouTube management.', icon: 'play-circle' },
+                        { title: 'Advertising Support', text: 'One campaign setup or one active monthly campaign focus. Not all content at once.', icon: 'target' },
+                        { title: 'Meetings', text: 'Briefings and reviews are possible. Live technical training is a separate workflow.', icon: 'users' },
+                    ].map((c, i) => (
+                        <SectionCard key={i}>
+                            <div className="w-12 h-12 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mb-4">
+                                <i data-lucide={c.icon} className="w-6 h-6 text-cyan-400"></i>
+                            </div>
+                            <h3 className="text-white font-semibold text-lg mb-2">{c.title}</h3>
+                            <p className="text-sm text-zinc-400 leading-relaxed">{c.text}</p>
+                        </SectionCard>
+                    ))}
+                </div>
+            </section>
+        );
+    }
+
+    function YouTubeSection() {
+        return (
+            <section id="youtube" className="space-y-8 bg-glow-coffee">
+                <div className="fade-in">
+                    <HeaderBadge text="YouTube Services" color="coffee" />
+                    <h2 className="font-serif text-3xl md:text-4xl text-white mt-4 mb-3">YouTube Setup & Uploads</h2>
+                    <p className="text-zinc-400 max-w-2xl leading-relaxed mt-2">
+                        First, regarding YouTube.
+                    </p>
+                </div>
+
+                {/* Timeline */}
+                <div className="space-y-4 fade-in">
+                    <h3 className="text-white font-semibold uppercase tracking-wider text-sm mb-4">Timeline</h3>
+                    <WorkflowStep number="1" title="Channel Setup — Completed" text="We agreed separately to open and set up your YouTube channel, including the basic channel setup and channel cover/branding, for AED 250. This part has been completed." />
+                    <div className="workflow-connector"></div>
+                    <WorkflowStep number="2" title="First Upload — One-Time Launch Support" text="After that, you asked us to also upload one of the existing videos to YouTube. This upload was not part of the original production package, and it was also not included in the AED 250 channel setup fee. However, we did it as a one-time launch support to help you get the channel started properly. For that video, we used the existing cover and adapted the available description, because the video was already suitable for YouTube." />
+                    <div className="workflow-connector"></div>
+                    <WorkflowStep number="3" title="Future Uploads — Per Video" text="Going forward, YouTube posting and packaging will be treated as a separate add-on service. Each video requires its own upload preparation, description, optimization, and cover — regardless of the video source." />
+                    <NoteCard type="info">
+                        <strong>What does 'per video' mean in practice?</strong> Each video you want uploaded to YouTube counts as one separate task. For example, if you have 3 videos to upload this month, that is 3 × AED 350 or 3 × AED 450. There is no monthly bundle or unlimited upload option.
+                    </NoteCard>
+                </div>
+
+                {/* Pricing cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 fade-in">
+                    <PriceCard
+                        title="Client-Provided Video"
+                        price="AED 450 / video"
+                        subtitle="External content"
+                        accent="coffee"
+                        included={['Upload', 'Title', 'Basic description', 'Basic YouTube optimization', 'Hashtags / tags', 'Upload settings', 'Simple thumbnail / cover using available materials']}
+                        note="This applies when the video is provided by you or comes from outside our current production workflow. Higher price because additional checking and adaptation is needed."
+                    />
+                    <PriceCard
+                        title="UniFilms-Produced Video"
+                        price="AED 350 / video"
+                        subtitle="In-house content"
+                        accent="cyan"
+                        included={['Upload', 'Basic description', 'Basic YouTube optimization', 'Simple YouTube thumbnail / cover based on the existing visual direction', 'Basic channel organization if needed']}
+                        note="This applies when the video was already filmed, edited, or prepared by UniFilms."
+                    />
+                </div>
+
+                {/* 3-column comparison */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 fade-in">
+                    <SectionCard>
+                        <div className="text-center">
+                            <div className="w-12 h-12 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mx-auto mb-3">
+                                <i data-lucide="monitor" className="w-5 h-5 text-cyan-400"></i>
+                            </div>
+                            <h4 className="text-white font-semibold mb-2">Channel Setup</h4>
+                            <p className="text-xs text-zinc-400 mb-3">Create and prepare the YouTube channel.</p>
+                            <span className="inline-block text-xs px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-400 font-medium">Completed — AED 250</span>
+                        </div>
+                    </SectionCard>
+                    <SectionCard>
+                        <div className="text-center">
+                            <div className="w-12 h-12 rounded-2xl bg-coffee/10 border border-coffee/20 flex items-center justify-center mx-auto mb-3">
+                                <i data-lucide="upload" className="w-5 h-5 text-coffee"></i>
+                            </div>
+                            <h4 className="text-white font-semibold mb-2">Video Upload</h4>
+                            <p className="text-xs text-zinc-400 mb-3">Upload one video and package it with title, description, optimization, and cover.</p>
+                            <span className="inline-block text-xs px-3 py-1 rounded-full bg-coffee/10 text-coffee font-medium">AED 350 or AED 450 / video</span>
+                        </div>
+                    </SectionCard>
+                    <SectionCard className="opacity-50">
+                        <div className="text-center">
+                            <div className="w-12 h-12 rounded-2xl bg-zinc-800 border border-zinc-700 flex items-center justify-center mx-auto mb-3">
+                                <i data-lucide="bar-chart-3" className="w-5 h-5 text-zinc-500"></i>
+                            </div>
+                            <h4 className="text-zinc-500 font-semibold mb-2">YouTube Management</h4>
+                            <p className="text-xs text-zinc-600 mb-3">Plan channel growth, analyze performance, manage posting strategy over time.</p>
+                            <span className="inline-block text-xs px-3 py-1 rounded-full bg-zinc-800 text-zinc-500 font-medium">Not included</span>
+                        </div>
+                    </SectionCard>
+                </div>
+
+                <div className="fade-in rounded-2xl overflow-hidden border border-zinc-800/50">
+                    <img src="carmen_svg_illustrations/youtube-setup-vs-upload-vs-management.svg" alt="YouTube setup vs upload vs management" className="w-full h-auto" loading="lazy" />
+                </div>
+                <div className="fade-in rounded-2xl overflow-hidden border border-zinc-800/50">
+                    <img src="carmen_svg_illustrations/youtube-upload-client-vs-unifilms.svg" alt="Client video vs UniFilms video upload pricing" className="w-full h-auto" loading="lazy" />
+                </div>
+
+                <NoteCard type="warning">
+                    <strong className="text-coffee">Important:</strong> This is not YouTube management or growth strategy. It is only upload and basic packaging per video. Both options are per video. Not per month. Not full channel management.
+                </NoteCard>
+            </section>
+        );
+    }
+
+    function CampaignOptionsSection() {
+        return (
+            <section id="campaigns" className="space-y-8 bg-glow-cyan">
+                <div className="fade-in">
+                    <HeaderBadge text="Advertising" color="cyan" />
+                    <h2 className="font-serif text-3xl md:text-4xl text-white mt-4 mb-3">Campaign Options</h2>
+                    <p className="text-zinc-400 max-w-2xl leading-relaxed mt-2">
+                        Second, regarding advertising and boosting. There are two different options depending on the level of support you need.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in">
+                    {/* One-Time */}
+                    <div className="card-glass p-6 border border-zinc-800 hover:border-coffee/30 transition-colors">
+                        <span className="text-xs uppercase tracking-widest text-coffee font-semibold">Launch Only</span>
+                        <h3 className="font-serif text-2xl text-white mt-2">One-Time Campaign Setup</h3>
+                        <p className="text-3xl font-bold text-coffee mt-2">AED 1,500 <span className="text-sm text-zinc-500 font-normal">+ ad spend</span></p>
+                        <p className="text-sm text-zinc-400 mt-3 mb-4">This is only for setting up and launching one campaign. After the campaign is launched, this option does not include ongoing monitoring, optimization, reports, audience changes, budget adjustments, new creatives, or campaign management.</p>
+                        <div className="mt-3">
+                            <p className="text-xs uppercase tracking-wide text-zinc-500 mb-2">Included</p>
+                            <IncludedList items={['Campaign structure', 'Audience setup', 'Basic ad text', 'Creative upload', 'Campaign launch', 'Checking that the campaign is active']} />
+                        </div>
+                        <div className="mt-5">
+                            <p className="text-xs uppercase tracking-wide text-zinc-500 mb-2">Not Included After Launch</p>
+                            <NotIncludedList items={['Ongoing monitoring', 'Optimization', 'Reports', 'Audience changes after launch', 'Budget adjustments after launch', 'New creatives', 'Campaign management']} />
+                        </div>
+                        <NoteCard type="warning">
+                            For example, if we set up a campaign for Limestone House, we launch that one campaign and make sure it is active. After that, the campaign continues running in your ad account.
+                        </NoteCard>
+                        <NoteCard type="info">
+                            If the campaign later needs changes — for example, changing the audience, changing the budget, replacing the video, testing another Reel, checking why leads are not coming, preparing a performance summary, or adjusting the campaign after a few days — these are not included in the one-time setup.
+                        </NoteCard>
+                    </div>
+
+                    {/* Monthly */}
+                    <div className="card-glass p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-colors">
+                        <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold">Launch + Basic Monthly Management</span>
+                        <h3 className="font-serif text-2xl text-white mt-2">Performance Marketing Add-on</h3>
+                        <p className="text-3xl font-bold text-cyan-400 mt-2">AED 2,000 <span className="text-sm text-zinc-500 font-normal">/ month + ad spend</span></p>
+                        <p className="text-sm text-zinc-400 mt-3 mb-4">This option includes one active campaign focus per month with basic management during the month.</p>
+                        <div className="mt-3">
+                            <p className="text-xs uppercase tracking-wide text-zinc-500 mb-2">Included</p>
+                            <IncludedList items={['One active campaign focus per month', 'Campaign setup', 'Audience targeting', 'Ad copy', 'Creative upload', 'Campaign launch', 'Basic monitoring during the month', 'Minor adjustments if needed', 'Basic performance review']} />
+                        </div>
+                        <NoteCard type="info">
+                            For example, if we run a monthly campaign for Limestone House, we can check basic performance, see if the audience is reacting, make minor adjustments, and review the campaign during the month.
+                        </NoteCard>
+                    </div>
+                </div>
+
+                <SectionCard className="fade-in">
+                    <h4 className="text-white font-semibold mb-3">In Simple Terms</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="flex items-start gap-3">
+                            <span className="text-coffee font-bold text-lg shrink-0">→</span>
+                            <p className="text-sm text-zinc-400"><strong className="text-white">One-Time Campaign Setup</strong> = we prepare and launch the campaign once. After launch, we are not managing it.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-cyan-400 font-bold text-lg shrink-0">→</span>
+                            <p className="text-sm text-zinc-400"><strong className="text-white">Performance Marketing Add-on</strong> = launch + basic monitoring + minor optimization during the month.</p>
+                        </div>
+                    </div>
+                </SectionCard>
+
+                <NoteCard type="info">
+                    Ad spend is separate and paid by you directly through your ad account. Any property advertising permits, legal approvals, DLD/Trakheesi requirements, property details, price, availability, and advertising claims must also be provided and approved by you.
+                </NoteCard>
+
+                <SectionCard className="fade-in">
+                    <h4 className="text-white font-semibold mb-3">What We Need From You Before Campaign Setup</h4>
+                    <p className="text-sm text-zinc-400 mb-3">Before we can set up any campaign, the following must be provided and approved by you:</p>
+                    <IncludedList items={[
+                        'Property name, price, and availability (if property campaign)',
+                        'Location details and key selling points',
+                        'Approved property description and any specific claims',
+                        'Target audience preferences (area, budget range, nationality, interest)',
+                        'Ad spend budget for the selected campaign',
+                        'Access to your Meta / Instagram / Facebook advertising account through Meta Business Suite',
+                        'Approved photos or videos for the ad creative',
+                        'Any required permits or legal approvals (DLD, Trakheesi, etc.)',
+                        'Final approval for ad text and any advertising claims',
+                    ]} />
+                    <NoteCard type="warning">
+                        We cannot launch a campaign without approved materials and details. If materials are delayed, the campaign timeline shifts accordingly.
+                    </NoteCard>
+                </SectionCard>
+
+                <div className="card-glass p-6 md:p-8 border-l-4 border-cyan-400 fade-in">
+                    <h4 className="text-cyan-400 font-bold uppercase tracking-widest text-sm mb-4">For Limestone House Specifically</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="p-5 rounded-2xl bg-coffee/5 border border-coffee/20">
+                            <span className="text-xs uppercase tracking-widest text-coffee font-semibold">Option A</span>
+                            <h5 className="text-white font-semibold text-lg mt-2">One-Time Campaign Setup</h5>
+                            <p className="text-2xl font-bold text-coffee mt-1">AED 1,500 <span className="text-sm text-zinc-500 font-normal">+ ad spend</span></p>
+                            <p className="text-sm text-zinc-400 mt-3">We set up and launch one Limestone House campaign. After launch, the campaign runs in your ad account without ongoing management.</p>
+                        </div>
+                        <div className="p-5 rounded-2xl bg-cyan-400/5 border border-cyan-400/20">
+                            <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold">Option B</span>
+                            <h5 className="text-white font-semibold text-lg mt-2">Performance Marketing Add-on</h5>
+                            <p className="text-2xl font-bold text-cyan-400 mt-1">AED 2,000 <span className="text-sm text-zinc-500 font-normal">/ month + ad spend</span></p>
+                            <p className="text-sm text-zinc-400 mt-3">We set up, launch, monitor, and make minor adjustments for one active Limestone House campaign focus during the month.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
+    function CampaignFocusSection() {
+        return (
+            <section id="focus" className="space-y-8 bg-glow-coffee">
+                <div className="fade-in">
+                    <HeaderBadge text="Key Concept" color="coffee" />
+                    <h2 className="font-serif text-3xl md:text-4xl text-white mt-4 mb-2">What Does "One Active Campaign Focus" Mean?</h2>
+                    <p className="text-zinc-400 max-w-2xl leading-relaxed">
+                        "One active campaign focus" means one specific advertising objective at a time. It does not mean promoting everything at the same time — not the whole account, all properties, all Reels, and the YouTube channel together.
+                    </p>
+                    <p className="text-zinc-400 max-w-2xl leading-relaxed mt-3">
+                        Think of it like this: each campaign focus is one "box" of work. Each box needs its own audience, its own ad creative, its own budget logic, and its own monitoring. More boxes = more separate work.
+                    </p>
+                </div>
+
+                {/* One focus examples */}
+                <div className="fade-in">
+                    <h3 className="text-cyan-400 text-xs uppercase tracking-widest font-semibold mb-4">Included as One Focus</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <ExampleCard title="Limestone House" label="1 box = 1 campaign focus" positive boxes={1} />
+                        <ExampleCard title="One Selected Instagram Reel" label="1 box = 1 campaign focus" positive boxes={1} />
+                        <ExampleCard title="One Selected YouTube Video" label="1 box = 1 campaign focus" positive boxes={1} />
+                        <ExampleCard title="One Personal Branding Video" label="1 box = 1 campaign focus" positive boxes={1} />
+                    </div>
+                </div>
+
+                {/* Not one focus examples */}
+                <div className="fade-in">
+                    <h3 className="text-coffee text-xs uppercase tracking-widest font-semibold mb-4">Not One Focus</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <ExampleCard title="Limestone + Another Property" label="2 boxes = 2 campaign focuses" positive={false} boxes={2} />
+                        <ExampleCard title="Limestone + Personal Branding Reel" label="2 boxes = 2 campaign focuses" positive={false} boxes={2} />
+                        <ExampleCard title="Three Different Reels" label="3 boxes = 3 campaign focuses" positive={false} boxes={3} />
+                        <ExampleCard title="YouTube Growth + Instagram Promo" label="2 different objectives" positive={false} boxes={2} />
+                        <div className="sm:col-span-2">
+                            <ExampleCard title="All Properties + All Reels + Full Instagram + Full YouTube" label="Not one campaign focus" positive={false} boxes={4} />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Platform vs Objective */}
+                <SectionCard className="fade-in">
+                    <h4 className="text-white font-semibold mb-4">Platform vs Objective</h4>
+                    <p className="text-sm text-zinc-400 mb-4">A campaign focus is not defined only by platform. It is defined by goal.</p>
+                    <div className="space-y-3">
+                        <div className="flex items-center gap-3 p-3 rounded-lg bg-cyan-400/5 border border-cyan-400/10">
+                            <span className="text-cyan-400 text-xs font-semibold uppercase shrink-0">One focus</span>
+                            <span className="text-sm text-zinc-300">Limestone House lead generation → Instagram/Facebook ads</span>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 rounded-lg bg-coffee/5 border border-coffee/10">
+                            <span className="text-coffee text-xs font-semibold uppercase shrink-0">Two focuses</span>
+                            <span className="text-sm text-zinc-300">Limestone House leads + Carmen personal brand awareness</span>
+                        </div>
+                    </div>
+                    <NoteCard type="info">If there are multiple properties, multiple videos with different messages, or multiple platforms with different goals, they must be treated as separate campaign focuses.</NoteCard>
+                </SectionCard>
+
+                <SectionCard className="fade-in">
+                    <h4 className="text-white font-semibold mb-3">Real-World Scenario</h4>
+                    <p className="text-sm text-zinc-400 leading-relaxed mb-3">
+                        Let's say you want to promote Limestone House and also run an awareness campaign for Carmen Moubarak as a real estate advisor.
+                    </p>
+                    <p className="text-sm text-zinc-400 leading-relaxed mb-3">
+                        These are two different objectives: one is about generating leads for a specific property, the other is about building personal brand awareness. They need different audiences, different ad creatives, different messaging, and different success metrics.
+                    </p>
+                    <p className="text-sm text-zinc-400 leading-relaxed">
+                        That is why they count as <strong className="text-white">two separate campaign focuses</strong>, not one. If you want both running at the same time, it would be discussed as two separate campaign focuses with adjusted pricing.
+                    </p>
+                </SectionCard>
+
+                <div className="fade-in rounded-2xl overflow-hidden border border-zinc-800/50">
+                    <img src="carmen_svg_illustrations/one-campaign-focus-box-logic.svg" alt="One campaign focus box logic" className="w-full h-auto" loading="lazy" />
+                </div>
+
+            </section>
+        );
+    }
+
+    function MonitoringSection() {
+        return (
+            <section id="monitoring" className="space-y-8 bg-glow-cyan">
+                <div className="fade-in">
+                    <HeaderBadge text="After Launch" color="cyan" />
+                    <h2 className="font-serif text-3xl md:text-4xl text-white mt-4 mb-3">Monitoring & Management</h2>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in">
+                    {/* One-time workflow */}
+                    <SectionCard>
+                        <h3 className="text-coffee font-semibold text-lg mb-5">One-Time Setup: Launch and Handover</h3>
+                        <div className="space-y-3">
+                            <WorkflowStep number="1" title="Confirm" text="Goal and materials" />
+                            <WorkflowStep number="2" title="Set Up" text="Campaign structure" />
+                            <WorkflowStep number="3" title="Launch" text="Campaign goes live" />
+                            <WorkflowStep number="4" title="Check" text="Campaign is active" />
+                            <WorkflowStep number="5" title="Handover" text="Campaign runs in Carmen's ad account" />
+                        </div>
+                        <div className="stop-line mt-5 text-center">
+                            Stop: No ongoing management included
+                        </div>
+                        <NoteCard type="info">
+                            <strong>Example:</strong> We launch a Limestone House campaign on Instagram. After launch, we confirm it is running. From this point, the campaign runs in your ad account. If after 5 days you want to check why leads are slow, change the audience, or try a different video — that is not part of the one-time setup.
+                        </NoteCard>
+                        <div className="mt-4">
+                            <NotIncludedList items={['Changing audience', 'Changing budget', 'Replacing video', 'Testing another Reel', 'Checking why leads are not coming', 'Preparing a performance summary', 'Adjusting campaign after a few days']} />
+                        </div>
+                    </SectionCard>
+
+                    {/* Monthly workflow */}
+                    <SectionCard>
+                        <h3 className="text-cyan-400 font-semibold text-lg mb-5">Monthly Performance: Launch + Basic Management</h3>
+                        <div className="space-y-3">
+                            <WorkflowStep number="1" title="Confirm" text="One campaign focus" />
+                            <WorkflowStep number="2" title="Set Up & Launch" text="Campaign goes live" />
+                            <WorkflowStep number="3" title="Check" text="Basic performance review" />
+                            <WorkflowStep number="4" title="Adjust" text="Minor adjustments if needed" />
+                            <WorkflowStep number="5" title="Review" text="Basic performance summary" />
+                        </div>
+                        <div className="mt-5 p-3 rounded-xl bg-cyan-400/5 border border-cyan-400/10 text-xs text-cyan-400 text-center font-medium uppercase tracking-wide">
+                            Managed during the month
+                        </div>
+                        <NoteCard type="info">
+                            <strong>Example:</strong> We run a monthly campaign for Limestone House. During the month, we check if the audience is responding, adjust targeting slightly if needed, and give you a basic summary at the end. But if you also want to promote a Reel about Carmen as an advisor at the same time — that is a second focus and separate work.
+                        </NoteCard>
+                        <NoteCard type="warning">
+                            <strong>What counts as a "minor adjustment"?</strong> Small audience refinement, minor ad text change, small budget shift within the same objective. <strong>What is NOT minor:</strong> switching property, changing objective, replacing campaign with a different Reel, adding a new platform, or starting a new campaign focus.
+                        </NoteCard>
+                        <div className="mt-4">
+                            <p className="text-xs uppercase tracking-wide text-zinc-500 mb-2">Still not included</p>
+                            <NotIncludedList items={['Promoting everything at once', 'Daily optimization', 'Advanced reporting', 'Lead handling', 'New campaign strategy every few days', 'New video production', 'Advanced A/B testing', 'Guaranteed leads, views, or sale']} />
+                        </div>
+                    </SectionCard>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 fade-in">
+                    <div className="rounded-2xl overflow-hidden border border-zinc-800/50">
+                        <img src="carmen_svg_illustrations/one-time-campaign-launch-stop.svg" alt="One-time campaign setup stops after launch" className="w-full h-auto" loading="lazy" />
+                    </div>
+                    <div className="rounded-2xl overflow-hidden border border-zinc-800/50">
+                        <img src="carmen_svg_illustrations/monthly-performance-flow.svg" alt="Monthly performance includes basic monitoring" className="w-full h-auto" loading="lazy" />
+                    </div>
+                </div>
+
+                {/* Basic vs Full */}
+                <SectionCard className="fade-in">
+                    <h4 className="text-white font-semibold mb-4">Basic management does not mean full marketing department.</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p className="text-xs uppercase tracking-wide text-cyan-400 mb-2">Basic Monthly Management</p>
+                            <IncludedList items={['Checking basic performance', 'Minor adjustments', 'Basic review']} />
+                        </div>
+                        <div className="opacity-50">
+                            <p className="text-xs uppercase tracking-wide text-zinc-500 mb-2">Full Marketing Management</p>
+                            <NotIncludedList items={['Daily optimization', 'Full reporting dashboard', 'Lead handling', 'Replying to comments/DMs', 'New campaign ideas every few days', 'New video production', 'Advanced A/B testing', 'Guaranteed results']} />
+                            <p className="text-xs text-zinc-600 mt-3 font-medium">Separate service, not included here</p>
+                        </div>
+                    </div>
+                </SectionCard>
+            </section>
+        );
+    }
+
+    function MeetingsSection() {
+        return (
+            <section id="meetings" className="space-y-8 bg-glow-coffee">
+                <div className="fade-in">
+                    <HeaderBadge text="Collaboration" color="coffee" />
+                    <h2 className="font-serif text-3xl md:text-4xl text-white mt-4 mb-3">Meetings and Live Setup</h2>
+                    <p className="text-zinc-400 max-w-2xl leading-relaxed mt-2">
+                        Third, regarding meetings and live setup.
+                    </p>
+                </div>
+
+                {/* Context card */}
+                <SectionCard className="fade-in">
+                    <p className="text-zinc-300 leading-relaxed">
+                        We understand that you would like to better understand how YouTube uploads, descriptions, and advertising setup work, especially because this is still new for you.
+                    </p>
+                    <p className="text-zinc-300 leading-relaxed mt-3">
+                        We are happy to be transparent about the structure, the result, and the next steps. The main issue is keeping the workflow controlled and efficient. We already suggested that you can use tools like ChatGPT and Claude/Codex for descriptions, ideas, captions, and content structure, because you already have access to them and they can help you handle some parts independently.
+                    </p>
+                </SectionCard>
+
+                <SectionCard className="fade-in">
+                    <p className="text-zinc-300 text-center italic text-lg">"The issue is not transparency. The issue is time control and workflow efficiency."</p>
+                    <p className="text-zinc-400 text-center text-sm mt-3">
+                        A live in-person setup session can easily turn into open-ended technical training and troubleshooting: account access issues, platform settings, AI tool questions, description writing, campaign settings, rejected ads, different buttons, different options, and many small questions that can take much longer than expected.
+                    </p>
+                    <p className="text-zinc-400 text-center text-sm mt-2 font-medium">
+                        This is why we need to keep the workflow structured.
+                    </p>
+                </SectionCard>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in">
+                    <SectionCard>
+                        <h3 className="text-cyan-400 font-semibold text-lg mb-4">What We Can Do</h3>
+                        <p className="text-sm text-zinc-400 mb-3">We are happy to advise you on:</p>
+                        <IncludedList items={[
+                            'Recommending which content works best for YouTube vs Instagram',
+                            'Which video is better to post or promote',
+                            'What the YouTube title and description should focus on',
+                            'What campaign focus makes sense',
+                            'What content direction is stronger',
+                            'What was done after the upload or campaign setup',
+                            'What the next practical steps should be',
+                            'A short 30-minute briefing after setup or after a campaign (remote or in-person)',
+                            'General content direction related to the selected video, upload, or campaign focus',
+                        ]} />
+                    </SectionCard>
+                    <SectionCard>
+                        <h3 className="text-coffee font-semibold text-lg mb-4">What Is Not Included</h3>
+                        <p className="text-sm text-zinc-400 mb-3">However, this is different from live technical training or observing the full setup process step by step:</p>
+                        <NotIncludedList items={[
+                            'Sitting together while we set up YouTube descriptions, upload videos, or configure ad campaigns',
+                            'Live walkthrough of every Meta Ads setting',
+                            'Teaching how to use ChatGPT / Claude / Codex step by step',
+                            'Troubleshooting account access, platform errors, rejected ads, or AI tool issues during a live session',
+                            'Open-ended technical training',
+                            'Full workshop format',
+                        ]} />
+                        <NoteCard type="warning">
+                            Sitting together while we set up YouTube descriptions, upload videos, or configure ad campaigns would turn the service into a training/workshop session. That is a different type of work, because it takes much more time and changes the workflow from execution to teaching.
+                        </NoteCard>
+                    </SectionCard>
+                </div>
+
+                <div className="fade-in rounded-2xl overflow-hidden border border-zinc-800/50">
+                    <img src="carmen_svg_illustrations/briefing-vs-training.svg" alt="Briefing versus technical training" className="w-full h-auto" loading="lazy" />
+                </div>
+
+                {/* Remote vs In-Person */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 fade-in">
+                    <SectionCard>
+                        <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold">Default</span>
+                        <h4 className="text-white font-semibold mt-2 mb-3">Remote Briefing</h4>
+                        <IncludedList items={['Faster', 'Easier to schedule', 'Enough for explaining results', 'Avoids open-ended technical troubleshooting']} />
+                    </SectionCard>
+                    <SectionCard>
+                        <span className="text-xs uppercase tracking-widest text-coffee font-semibold">Optional</span>
+                        <h4 className="text-white font-semibold mt-2 mb-3">In-Person 30-Minute Briefing</h4>
+                        <p className="text-sm text-zinc-400 mb-2">Only for:</p>
+                        <IncludedList items={['Result review', 'Next steps', 'Campaign summary']} />
+                        <p className="text-sm text-zinc-400 mt-3 mb-2">Not for:</p>
+                        <NotIncludedList items={['Full setup observation', 'Technical training', 'Troubleshooting every platform issue']} />
+                    </SectionCard>
+                </div>
+            </section>
+        );
+    }
+
+    function WorkflowSection() {
+        return (
+            <section id="workflow" className="space-y-8 bg-glow-cyan">
+                <div className="fade-in">
+                    <HeaderBadge text="Recommended Process" color="cyan" />
+                    <h2 className="font-serif text-3xl md:text-4xl text-white mt-4 mb-3">Next Workflow</h2>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 fade-in">
+                    {[
+                        { num: '01', title: 'Before the Work', text: 'We agree on the goal, materials, campaign focus, budget, and required details. You provide all necessary approvals, property information, media files, and access. This step ensures there is no confusion once work begins.', color: 'coffee' },
+                        { num: '02', title: 'During the Work', text: 'UniFilms completes the technical setup efficiently on our side. This includes campaign structure, audience setup, ad text, creative upload, optimization settings, and launch. No live observation or step-by-step teaching is included.', color: 'cyan' },
+                        { num: '03', title: 'After the Work', text: 'We send you a clear summary of what was done and what the next steps are. If needed, we can schedule a short 30-minute briefing to explain the result — either remotely or in person.', color: 'coffee' },
+                    ].map((s, i) => (
+                        <SectionCard key={i}>
+                            <span className={`text-3xl font-bold font-serif ${s.color === 'cyan' ? 'text-cyan-400/30' : 'text-coffee/30'}`}>{s.num}</span>
+                            <h4 className="text-white font-semibold text-lg mt-2 mb-2">{s.title}</h4>
+                            <p className="text-sm text-zinc-400 leading-relaxed">{s.text}</p>
+                        </SectionCard>
+                    ))}
+                </div>
+
+                <SectionCard className="fade-in">
+                    <div className="text-center">
+                        <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold">Optional</span>
+                        <h4 className="text-white font-semibold mt-2 mb-2">30-Minute Briefing</h4>
+                        <p className="text-sm text-zinc-400">Optional 30-minute briefing, if needed and agreed, after setup or campaign review. Not recurring. Not live technical training. Remote by default, in-person only if specifically agreed.</p>
+                    </div>
+                </SectionCard>
+
+                <div className="card-glass p-6 md:p-8 border-l-4 border-coffee fade-in">
+                    <h4 className="text-coffee font-bold uppercase tracking-widest text-sm mb-2">Best Working Structure</h4>
+                    <p className="text-white text-lg font-serif italic">
+                        "We agree on the goal, we set it up, and then we report back clearly."
+                    </p>
+                </div>
+
+
+                <div className="fade-in rounded-2xl overflow-hidden border border-zinc-800/50">
+                    <img src="carmen_svg_illustrations/before-during-after-workflow.svg" alt="Before during after workflow" className="w-full h-auto" loading="lazy" />
+                </div>
+
+                <NoteCard type="info">We do not need to sit together during the technical setup for the work to be done correctly.</NoteCard>
+            </section>
+        );
+    }
+
+    function FAQSection() {
+        const faqs = [
+            { q: 'Does this include growing my full Instagram or YouTube account?', a: 'No. The listed options cover specific work: YouTube upload, one-time campaign setup, or one active monthly campaign focus. Full account growth requires a separate strategy and management package.', k: 'This is specific execution, not full account growth management.', e: 'Uploading one YouTube video is not the same as managing the YouTube channel. Promoting one Reel is not the same as growing the full Instagram account.' },
+            { q: 'If I pay AED 2,000/month, why can\'t we promote everything?', a: 'Because each campaign focus needs its own objective, audience, creative, budget logic, monitoring, and adjustment. Promoting many things at once becomes a wider advertising plan, not one basic campaign focus.', k: 'AED 2,000/month covers one active campaign focus, not all content and all platforms at once.' },
+            { q: 'If everything is under my brand, why is it not one campaign focus?', a: 'Because a campaign focus is based on the advertising objective, not only the name of the brand. Selling Limestone House is one objective. Building awareness for Carmen as an advisor is another. Growing YouTube is another.', k: 'Same brand does not always mean same campaign focus. Different goals require separate campaign structure.' },
+            { q: 'What if I want to promote more than one campaign focus?', a: 'The AED 2,000/month Performance Marketing Add-on includes one active campaign focus only. If you want to promote an additional property, another Reel, a YouTube video, or a separate personal branding campaign at the same time, this becomes an additional campaign focus. Each additional campaign focus starts from AED 1,000/month + ad spend, depending on the objective, platform, number of creatives, and required management level.', k: 'One campaign focus is included; additional active focuses are quoted separately.' },
+            { q: 'After the one-time setup, can you just check it after a few days?', a: 'A quick check after launch is included only to confirm the campaign is active. Ongoing checking, performance review, changes, and optimization are not included in the one-time setup.', k: 'One-time setup stops after launch. Monthly Performance includes basic monitoring during the month.' },
+            { q: 'Do you handle leads, calls, WhatsApp, comments, or DMs?', a: 'No. Campaign setup or basic management does not include lead handling, replying to inquiries, qualifying buyers, calls, WhatsApp follow-up, CRM work, or community management.', k: 'We manage the campaign setup. Lead handling stays with Carmen or her team.' },
+            { q: 'How many rounds of revisions are included?', a: 'One round of reasonable revisions to the first draft package. One revision round means one complete written list of edit requests sent in one message or document.', k: 'One included revision round = one complete feedback list, submitted once.', e: 'Included: one complete list with all changes, text corrections, minor pacing, cover refinements. Not included: feedback sent over many days, new ideas after revision, additional cover concepts.' },
+            { q: 'Can I sit with you while you set it up so I can learn?', a: 'We can explain the result and the next steps, but watching the full technical setup live is a different service. It becomes training, not campaign setup.', k: 'Briefing explains the result. Training teaches the process. They are different services.' },
+            { q: 'Why is there a fee if someone else can help for free or cheaper?', a: 'Free or cheaper help can be useful for simple tasks, but it usually does not include professional responsibility, brand consistency, structured workflow, clear deliverables, or campaign accountability.', k: 'You are not paying only for the click. You are paying for correct packaging, consistency, and professional responsibility.' },
+            { q: 'Can we just boost all my Reels together?', a: 'Not under one basic campaign focus. Different Reels often have different messages, audiences, and goals.', k: 'One selected Reel can be one focus. All Reels together is not one basic focus.' },
+            { q: 'Can I use the same campaign to promote on Instagram and YouTube?', a: 'Not automatically. Meta/Instagram and YouTube/Google use different platforms, formats, and campaign systems. Same content can still require different campaign work if the platform, objective, or setup is different.', k: 'Same content can still require different campaign work if the platform, objective, or setup is different.' },
+            { q: 'Can we adjust the campaign after launch?', a: 'Small adjustments may be possible in the monthly Performance option if they stay within the same campaign focus. Larger changes become a new campaign focus or additional work.', k: 'A small adjustment is not the same as a new campaign.', e: 'Minor: small ad text change, audience refinement. New focus: switching property, changing objective, replacing campaign with different Reel.' },
+            { q: 'What do you need from me before setting up the campaign?', a: 'Before campaign setup, all required details must be provided: property name, price, availability, location, approved details, target audience, ad budget, ad account access, approved media, permits/approvals, and final approval for claims and ad text.', k: 'We can set up the campaign only after the required information and approvals are provided.' },
+            { q: 'What if the campaign does not generate leads?', a: 'In the monthly Performance option, we can review basic performance and make minor adjustments. However, leads, views, engagement, or sales cannot be guaranteed. Results depend on property appeal, price, market demand, ad budget, audience behavior, platform algorithm, competition, and how quickly leads are answered.', k: 'We manage the campaign work. We cannot guarantee market response.' },
+            { q: 'Why is YouTube upload charged per video?', a: 'Because YouTube upload is not just pressing upload. It still requires title, description, basic optimization, hashtags/tags, upload settings, thumbnail/cover adaptation, and checking that the video presentation looks correct.', k: 'A ready video still needs proper YouTube packaging.' },
+            { q: 'Can I send you my own phone videos to upload?', a: 'Yes. This falls under Client-provided video upload — AED 450/video. We can upload and package it, but we are not responsible for the original video quality, sound, framing, lighting, or content strength.', k: 'Client-provided video upload does not include fixing the original production quality.' },
+            { q: 'Does every upload include a fully custom thumbnail design?', a: 'No. It includes a simple thumbnail/cover using available materials and existing visual direction. Multiple concepts, advanced design, heavy retouching, or several rounds of cover revisions are not included.', k: 'Simple cover packaging is included. Advanced thumbnail design is separate.' },
+            { q: 'Do we need a meeting before every upload or campaign setup?', a: 'No. Most approvals can be done by message. This keeps the workflow faster and avoids unnecessary delays.', k: 'A meeting is only needed when there is a real briefing or review topic. Technical setup does not require an in-person meeting.' },
+            { q: 'Can I keep changing the cover if I still don\'t like it?', a: 'Cover refinements are included only as part of the one consolidated revision round. Review the cover together with the video and send all cover feedback at once.', k: 'Cover refinement is included once. Multiple cover redesigns are additional work.' },
+            { q: 'Can I send feedback little by little?', a: 'For the included revision round, feedback must be consolidated into one clear list. This keeps the editing workflow efficient and prevents repeated reopening of the same project.', k: 'Feedback should be collected first, then sent once as a complete list.' },
+            { q: 'What if I send feedback late?', a: 'The included feedback window is limited. If feedback is not sent within the agreed review period after the draft is received, the draft may be treated as accepted.', k: 'Late feedback can affect the schedule and may become additional work.' },
+            { q: 'What is a reasonable revision?', a: 'A minor change that stays within the approved scope, captured material, and creative direction. Examples: trim adjustment, pacing change, text correction, caption correction, cover refinement, shot substitution from usable material.', k: 'A revision adjusts the agreed work. It does not create a new project.', e: 'Out-of-scope: new concept, new style direction, reshoot, new script, new video idea, heavy re-edit, additional deliverables, changing direction after approval.' },
+            { q: 'What if I already posted or used the video?', a: 'If a draft or final deliverable is posted, sent to third parties, or used commercially, it is treated as accepted.', k: 'Published or commercially used content is treated as accepted.' },
+            { q: 'Why is YouTube upload not free if the video is already ready?', a: 'A ready video still needs platform packaging: title, description, basic optimization, thumbnail/cover, upload settings, playlist/channel organization, and final presentation check.', k: 'The video file is ready, but the YouTube post still needs to be prepared.' },
+            { q: 'Why is one-time campaign setup AED 1,500?', a: 'Because campaign setup includes more than pressing a boost button. It includes campaign structure, objective, audience, ad text, creative upload, launch settings, and launch check.', k: 'This is a launch service, not a random boost.' },
+            { q: 'Why is monthly Performance Marketing AED 2,000 for only one focus?', a: 'Because even one campaign focus needs setup, monitoring, basic review, and minor adjustments during the month. If several properties, videos, or objectives are promoted at the same time, the workload becomes larger than one basic campaign focus.', k: 'One focus keeps the monthly fee affordable and controlled. More focuses require more work.' },
+            { q: 'Can we make this cheaper?', a: 'The prices are already structured as limited-scope options. The way to reduce cost is to reduce scope, not to keep the same scope for a lower fee.', k: 'Lower price means smaller scope, not the same service with less responsibility.', e: 'To reduce cost: choose one-time setup instead of monthly, provide final approved materials, avoid extra revisions, focus on one objective, handle posting or lead replies internally.' },
+        ];
+
+        return (
+            <section id="faq" className="space-y-8 bg-glow-coffee">
+                <div className="fade-in">
+                    <HeaderBadge text="Common Questions" color="coffee" />
+                    <h2 className="font-serif text-3xl md:text-4xl text-white mt-4 mb-2">FAQ</h2>
+                    <p className="text-zinc-400">Simple answers to avoid confusion before we start.</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 fade-in">
+                    <div className="rounded-2xl overflow-hidden border border-zinc-800/50">
+                        <img src="carmen_svg_illustrations/revision-round-one-list.svg" alt="One revision round one complete feedback list" className="w-full h-auto" loading="lazy" />
+                    </div>
+                    <div className="rounded-2xl overflow-hidden border border-zinc-800/50">
+                        <img src="carmen_svg_illustrations/our-control-vs-market-response.svg" alt="Our control versus market response" className="w-full h-auto" loading="lazy" />
+                    </div>
+                </div>
+
+                <div className="space-y-3 fade-in">
+                    {faqs.map((f, i) => (
+                        <FAQItem key={i} question={f.q} answer={f.a} keyLine={f.k} example={f.e} />
+                    ))}
+                </div>
+            </section>
+        );
+    }
+
+    function PricingSection() {
+        return (
+            <section id="pricing" className="space-y-8 bg-glow-cyan">
+                <div className="fade-in">
+                    <HeaderBadge text="Investment" color="cyan" />
+                    <h2 className="font-serif text-3xl md:text-4xl text-white mt-4 mb-3">Pricing Overview</h2>
+                </div>
+
+                {/* Pricing Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-in">
+                    <PriceCard title="YouTube Channel Setup" price="AED 250" subtitle="Completed" accent="cyan"
+                        included={['Basic channel setup', 'Channel cover / branding', 'Initial channel preparation']}
+                        note="One-time setup fee, not ongoing YouTube management." />
+                    <PriceCard title="YouTube Upload — UniFilms" price="AED 350 / video" subtitle="In-house content" accent="cyan"
+                        included={['Upload', 'Basic description', 'Basic YouTube optimization', 'Simple thumbnail / cover', 'Basic channel organization']} />
+                    <PriceCard title="YouTube Upload — Client Video" price="AED 450 / video" subtitle="External content" accent="coffee"
+                        included={['Upload', 'Title', 'Basic description', 'Basic YouTube optimization', 'Hashtags / tags', 'Simple thumbnail / cover']} />
+                    <PriceCard title="One-Time Campaign Setup" price="AED 1,500" subtitle="Launch only · + ad spend" accent="coffee"
+                        included={['Campaign structure', 'Audience setup', 'Basic ad text', 'Creative upload', 'Launch', 'Active launch check']}
+                        note="No ongoing management after launch." />
+                    <PriceCard title="Performance Marketing" price="AED 2,000 / month" subtitle="Monthly · + ad spend" accent="cyan"
+                        included={['One active campaign focus', 'Setup', 'Launch', 'Basic monitoring', 'Minor adjustments', 'Basic review']}
+                        note="Not all platforms, all videos, and all properties at once." />
+                    <PriceCard title="Additional Campaign Focus" price="from AED 1,000" subtitle="Monthly · + ad spend" accent="cyan"
+                        included={['Applies when > 1 focus is active', 'Limestone + another property = 2', 'Limestone + branding Reel = 2', 'Quoted separately based on needs']}
+                        note="Depends on objective, platform, creatives, and management level." />
+                    <PriceCard title="Optional Briefing" price="30 minutes" subtitle="Review" accent="coffee"
+                        included={['Explain what was done', 'Review result', 'Clarify next steps']}
+                        note="Briefing is not live training or technical workshop." />
+                </div>
+
+                {/* Why These Prices */}
+                <div className="fade-in">
+                    <h3 className="text-white font-semibold text-xl mb-5 font-serif">Why These Prices Are Structured This Way</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {[
+                            { t: 'Defined Scope', d: 'Each price covers a specific task. This avoids confusion and prevents one small service from becoming unlimited work.' },
+                            { t: 'Custom Brand Work', d: "Even basic uploads and campaigns must match Carmen's premium real estate positioning, not generic posting." },
+                            { t: 'Professional Responsibility', d: 'Professional work includes preparation, checking, packaging, setup, and correct presentation — not only pressing buttons.' },
+                            { t: 'Time Control', d: 'Clear pricing protects both sides from open-ended tasks, repeated changes, and unclear expectations.' },
+                            { t: 'Separate Platform Budget', d: "Ad spend is paid separately to the advertising platform and is controlled through Carmen's ad account." },
+                        ].map((c, i) => (
+                            <SectionCard key={i}>
+                                <h4 className="text-white font-semibold mb-2">{c.t}</h4>
+                                <p className="text-sm text-zinc-400 leading-relaxed">{c.d}</p>
+                            </SectionCard>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Professional vs Informal */}
+                <SectionCard className="fade-in">
+                    <h4 className="text-white font-semibold text-lg mb-5">Professional Service vs Informal Help</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="opacity-50">
+                            <p className="text-xs uppercase tracking-wide text-zinc-500 mb-3">Informal Help</p>
+                            <ul className="space-y-2 text-sm text-zinc-500">
+                                {['Friend uploads a video', 'Quick post', 'No fixed scope', 'No brand consistency guarantee', 'No structured revision process', 'No campaign responsibility', 'No reporting', 'No clear accountability'].map((item, i) => (
+                                    <li key={i} className="flex items-start gap-2"><span className="mt-0.5">—</span><span>{item}</span></li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="text-xs uppercase tracking-wide text-cyan-400 mb-3">UniFilms Structured Service</p>
+                            <IncludedList items={['Defined deliverables', 'Premium visual consistency', 'Title / description / cover packaging', 'Campaign setup logic', 'Clear included / not included boundaries', 'Professional workflow', 'Review / briefing structure', 'Consistent Carmen Moubarak brand presentation']} />
+                        </div>
+                    </div>
+                    <NoteCard type="info">
+                        <strong>Informal help can be useful, but it is not the same as a professional, structured, brand-safe workflow.</strong>
+                    </NoteCard>
+                </SectionCard>
+
+                <div className="fade-in rounded-2xl overflow-hidden border border-zinc-800/50">
+                    <img src="carmen_svg_illustrations/price-scope-map.svg" alt="Pricing and scope map" className="w-full h-auto" loading="lazy" />
+                </div>
+
+                {/* Market Context */}
+                <SectionCard className="fade-in">
+                    <h4 className="text-white font-semibold mb-3">Market Context</h4>
+                    <p className="text-sm text-zinc-400 leading-relaxed mb-4">
+                        In Dubai/UAE, professional digital marketing, social media, and PPC services are commonly priced as monthly retainers or campaign fees. The prices here are intentionally limited-scope options for specific tasks, not full-service agency management.
+                    </p>
+                    <p className="text-sm text-zinc-400 leading-relaxed">
+                        Many professional monthly marketing services in Dubai are priced from several thousand AED per month and increase depending on platforms, reporting, content creation, ads, and management depth.
+                    </p>
+                </SectionCard>
+
+                {/* Quick Summary */}
+                <div className="card-glass p-6 md:p-8 border border-coffee/20 fade-in">
+                    <h3 className="text-coffee font-bold uppercase tracking-widest text-sm mb-4">Quick Summary</h3>
+                    <ul className="space-y-3 text-sm text-zinc-300">
+                        <li className="flex items-start gap-2"><span className="text-coffee mt-0.5 shrink-0">•</span><span><strong className="text-white">YouTube setup</strong> was completed for AED 250.</span></li>
+                        <li className="flex items-start gap-2"><span className="text-coffee mt-0.5 shrink-0">•</span><span><strong className="text-white">First upload</strong> was done as one-time launch support.</span></li>
+                        <li className="flex items-start gap-2"><span className="text-coffee mt-0.5 shrink-0">•</span><span><strong className="text-white">Future YouTube uploads</strong> are AED 350 or AED 450 per video.</span></li>
+                        <li className="flex items-start gap-2"><span className="text-coffee mt-0.5 shrink-0">•</span><span><strong className="text-white">One-time campaign setup</strong> is AED 1,500 + ad spend and stops after launch.</span></li>
+                        <li className="flex items-start gap-2"><span className="text-coffee mt-0.5 shrink-0">•</span><span><strong className="text-white">Monthly Performance Marketing</strong> is AED 2,000/month + ad spend for one active campaign focus.</span></li>
+                        <li className="flex items-start gap-2"><span className="text-coffee mt-0.5 shrink-0">•</span><span><strong className="text-white">One campaign focus</strong> means one specific objective, not everything at once.</span></li>
+                        <li className="flex items-start gap-2"><span className="text-coffee mt-0.5 shrink-0">•</span><span><strong className="text-white">Briefing is possible.</strong> Live technical training is not included.</span></li>
+                        <li className="flex items-start gap-2"><span className="text-coffee mt-0.5 shrink-0">•</span><span><strong className="text-white">Revisions</strong> must be sent as one complete feedback list. One included revision round.</span></li>
+                        <li className="flex items-start gap-2"><span className="text-coffee mt-0.5 shrink-0">•</span><span><strong className="text-white">Cover refinements</strong> are included only inside that one revision round.</span></li>
+                    </ul>
+                </div>
+            </section>
+        );
+    }
+
+    /* ─── MAIN APP ─── */
+    function App() {
+        const [activeSection, setActiveSection] = useState('overview');
+
+        const navigateTo = useCallback((id) => {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, []);
+
+        // Intersection Observer for active section
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setActiveSection(entry.target.id);
+                        }
+                    });
+                },
+                { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+            );
+            sections.forEach(s => {
+                const el = document.getElementById(s.id);
+                if (el) observer.observe(el);
+            });
+            return () => observer.disconnect();
+        }, []);
+
+        // Init Lucide icons — run once on mount + on section changes
+        useEffect(() => {
+            const timer = setTimeout(() => {
+                if (window.lucide) lucide.createIcons();
+            }, 150);
+            return () => clearTimeout(timer);
+        }, [activeSection]);
+
+        // Fade-in observer — run once on mount
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.08, rootMargin: '0px 0px -50px 0px' }
+            );
+            // Delay to let React finish rendering
+            const timer = setTimeout(() => {
+                document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
+            }, 200);
+            return () => { clearTimeout(timer); observer.disconnect(); };
+        }, []);
+
+        return (
+            <React.Fragment>
+                <Sidebar active={activeSection} onNav={navigateTo} />
+                <MobileNav active={activeSection} onNav={navigateTo} />
+
+                <div className="main-content min-h-screen pb-24 lg:pb-12">
+                    {/* Header */}
+                    <header className="px-6 md:px-12 pt-12 pb-4">
+                        <p className="text-xs uppercase tracking-widest text-coffee font-semibold mb-2">UniFilms</p>
+                        <h1 className="font-serif text-4xl md:text-5xl text-white leading-tight mb-3">
+                            Carmen Moubarak
+                        </h1>
+                        <p className="text-zinc-400 text-lg">YouTube & Campaign Clarification</p>
+                        <p className="text-zinc-600 text-sm mt-1">Scope • Posting • Advertising • Briefing Workflow</p>
+                    </header>
+
+                    {/* Welcome Intro */}
+                    <div className="px-6 md:px-12 pb-12">
+                        <div className="card-glass p-6 md:p-10 border-l-4 border-coffee fade-in">
+                            <p className="text-zinc-300 leading-relaxed text-base">
+                                Hi Carmen,
+                            </p>
+                            <p className="text-zinc-400 leading-relaxed mt-4">
+                                Thank you for your trust and for the collaboration so far. We truly appreciate working with you and want to make sure everything going forward is as smooth and clear as possible.
+                            </p>
+                            <p className="text-zinc-400 leading-relaxed mt-3">
+                                We prepared this briefing to clarify a few points properly, so we are fully aligned and there is no confusion about YouTube, advertising support, and meetings. The goal is not to create rules or restrictions — the goal is to keep the collaboration simple, transparent, and efficient, so both sides always know what to expect.
+                            </p>
+                            <p className="text-zinc-400 leading-relaxed mt-3">
+                                Below you will find clear answers to the most common questions about scope, pricing, campaign structure, and workflow. Everything is explained in simple terms with visual examples.
+                            </p>
+
+                            <div className="mt-6 pt-6 border-t border-zinc-800">
+                                <p className="text-xs uppercase tracking-widest text-coffee font-semibold mb-4">What This Briefing Covers</p>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                                    {[
+                                        { icon: 'play-circle', label: 'YouTube Setup & Uploads', desc: 'What was completed, future pricing per video' },
+                                        { icon: 'target', label: 'Campaign Options', desc: 'One-time setup vs monthly performance' },
+                                        { icon: 'crosshair', label: 'Campaign Focus', desc: 'What counts as one focus and what does not' },
+                                        { icon: 'bar-chart-3', label: 'Monitoring', desc: 'What happens after launch in each option' },
+                                        { icon: 'clock', label: 'Meetings & Workflow', desc: 'Briefings, training, and the best process' },
+                                        { icon: 'help-circle', label: 'FAQ & Pricing', desc: 'Common questions answered simply' },
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/50 border border-zinc-800/50">
+                                            <i data-lucide={item.icon} className="w-4 h-4 text-coffee mt-0.5 shrink-0"></i>
+                                            <div>
+                                                <p className="text-sm text-white font-medium">{item.label}</p>
+                                                <p className="text-xs text-zinc-500 mt-0.5">{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <p className="text-zinc-400 leading-relaxed mt-6 text-sm italic">
+                                We can clarify them by message or in a short structured briefing.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Sections */}
+                    <div className="px-6 md:px-12 space-y-20">
+                        <OverviewSection />
+                        <YouTubeSection />
+                        <CampaignOptionsSection />
+                        <CampaignFocusSection />
+                        <MonitoringSection />
+                        <MeetingsSection />
+                        <WorkflowSection />
+                        <FAQSection />
+                        <PricingSection />
+                    </div>
+
+                    {/* Footer */}
+                    <footer className="px-6 md:px-12 pt-16 pb-8">
+                        <div className="border-t border-zinc-800 pt-8 text-center">
+                            <p className="text-zinc-600 text-xs">Carmen Moubarak — YouTube & Campaign Clarification by UniFilms</p>
+                            <p className="text-zinc-700 text-[10px] mt-2">This briefing is a clarification of workflow and optional add-on services. It is not a replacement for the signed Service Agreement.</p>
+                        </div>
+                    </footer>
+                </div>
+            </React.Fragment>
+        );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+    </script>
+</body>
+</html>

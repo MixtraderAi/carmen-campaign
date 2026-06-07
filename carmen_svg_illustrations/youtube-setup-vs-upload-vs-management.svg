@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coffeeGlow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#c19a6b" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#c19a6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #d4d4d8; font-weight: 600; font-family: Inter, Arial, sans-serif; }
+      .micro { font-size: 15px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .chip { font-size: 16px; font-weight: 700; letter-spacing: .08em; font-family: Inter, Arial, sans-serif; }
+    </style>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    </marker>
+    <marker id="arrowCoffee" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c19a6b" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="#09090b"/>
+  <rect width="1200" height="800" rx="34" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="800" rx="34" fill="url(#coffeeGlow)"/>
+  <text x="70" y="72" font-size="38" fill="#ffffff" class="title">YouTube: Setup vs Upload vs Management</text>
+  <text x="70" y="106" font-size="22" fill="#a1a1aa" font-family="Inter, Arial, sans-serif">Uploading one video is not the same as managing the whole channel.</text>
+<rect x="110" y="190" width="290" height="420" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#22d3ee" stroke-opacity="0.72" filter="url(#softShadow)"/>
+    <rect x="197" y="246" width="116" height="88" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="3"/>
+    <circle cx="231" cy="287" r="18" fill="#22d3ee" fill-opacity="0.20" stroke="#22d3ee" stroke-width="2"/>
+    <path d="M263,276 H293 M263,292 H289 M263,308 H283" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+    <text x="255" y="390" font-size="27" fill="#fff" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">Channel Setup</text><text x="255" y="430" font-size="18" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">Create and prepare channel</text>
+    <rect x="160" y="510" width="190" height="42" rx="21.0" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.45"/>
+    <text x="255.0" y="537.0" class="chip" fill="#22d3ee" text-anchor="middle">Completed — AED 250</text>
+    <rect x="430" y="190" width="290" height="420" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#c19a6b" stroke-opacity="0.72" filter="url(#softShadow)"/>
+    <rect x="520" y="252" width="110" height="76" rx="16" fill="#c19a6b" fill-opacity="0.12" stroke="#c19a6b" stroke-width="3"/>
+    <path d="M563,268 L603,290 L563,312 Z" fill="#c19a6b" fill-opacity="0.85"/>
+    <text x="575" y="390" font-size="27" fill="#fff" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">Video Upload</text><text x="575" y="430" font-size="18" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">Upload one video + package it</text>
+    <rect x="480" y="510" width="190" height="42" rx="21.0" fill="#c19a6b" fill-opacity="0.12" stroke="#c19a6b" stroke-opacity="0.45"/>
+    <text x="575.0" y="537.0" class="chip" fill="#c19a6b" text-anchor="middle">AED 350 / 450 per video</text>
+    <rect x="750" y="190" width="290" height="420" rx="28" fill="#18181b" fill-opacity="0.68" stroke="#71717a" stroke-opacity="0.72" filter="url(#softShadow)"/>
+    <rect x="837" y="246" width="116" height="88" rx="18" fill="#71717a" fill-opacity="0.08" stroke="#71717a" stroke-width="3"/>
+    <path d="M860,315 V294 M887,315 V274 M915,315 V261 M853,315 H940" stroke="#71717a" stroke-width="5" stroke-linecap="round"/>
+    <text x="895" y="390" font-size="27" fill="#fff" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">YouTube Management</text><text x="895" y="430" font-size="18" fill="#a1a1aa" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">Calendar + strategy + growth</text>
+    <rect x="800" y="510" width="190" height="42" rx="21.0" fill="#71717a" fill-opacity="0.12" stroke="#71717a" stroke-opacity="0.45"/>
+    <text x="895.0" y="537.0" class="chip" fill="#71717a" text-anchor="middle">Not included in upload</text>
+    <path d="M400,400 L430,400" stroke="#c19a6b" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCoffee)"/><path d="M720,400 L750,400" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/><text x="600" y="690" font-size="28" fill="#c19a6b" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">KEY: upload one video ≠ full channel management</text>
+</svg>

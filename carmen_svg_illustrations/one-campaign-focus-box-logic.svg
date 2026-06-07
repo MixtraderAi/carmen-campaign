@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coffeeGlow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#c19a6b" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#c19a6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #d4d4d8; font-weight: 600; font-family: Inter, Arial, sans-serif; }
+      .micro { font-size: 15px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .chip { font-size: 16px; font-weight: 700; letter-spacing: .08em; font-family: Inter, Arial, sans-serif; }
+    </style>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    </marker>
+    <marker id="arrowCoffee" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c19a6b" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="#09090b"/>
+  <rect width="1200" height="800" rx="34" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="800" rx="34" fill="url(#coffeeGlow)"/>
+  <text x="70" y="72" font-size="38" fill="#ffffff" class="title">One Active Campaign Focus</text>
+  <text x="70" y="106" font-size="22" fill="#a1a1aa" font-family="Inter, Arial, sans-serif">1 box = 1 campaign focus. Multiple boxes = multiple focuses.</text>
+<text x="265" y="160" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">ONE FOCUS EXAMPLES</text>
+    <rect x="80" y="200" width="220" height="86" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="108" y="236" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">1</text>
+    <text x="190.0" y="251.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Limestone House</text>
+    <text x="190" y="318" font-size="17" fill="#22d3ee" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">1 box = 1 focus</text>
+    <rect x="350" y="200" width="220" height="86" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="378" y="236" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">1</text>
+    <text x="460.0" y="251.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">One Instagram Reel</text>
+    <text x="460" y="318" font-size="17" fill="#22d3ee" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">1 box = 1 focus</text>
+    <rect x="620" y="200" width="220" height="86" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="648" y="236" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">1</text>
+    <text x="730.0" y="251.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">One YouTube Video</text>
+    <text x="730" y="318" font-size="17" fill="#22d3ee" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">1 box = 1 focus</text>
+    <rect x="890" y="200" width="220" height="86" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="918" y="236" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">1</text>
+    <text x="1000.0" y="251.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">One Branding Video</text>
+    <text x="1000" y="318" font-size="17" fill="#22d3ee" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">1 box = 1 focus</text><text x="265" y="415" font-size="20" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">NOT ONE FOCUS</text><rect x="90" y="455" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="162.5" y="485" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">Limestone</text><text x="248" y="486" font-size="24" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">+</text><rect x="260" y="455" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="332.5" y="485" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">Another Property</text><text x="910" y="486" font-size="18" fill="#c19a6b" font-weight="800" text-anchor="start" font-family="Inter, Arial, sans-serif">2 focuses</text><rect x="90" y="525" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="162.5" y="555" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">Limestone</text><text x="248" y="556" font-size="24" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">+</text><rect x="260" y="525" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="332.5" y="555" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">Branding Reel</text><text x="910" y="556" font-size="18" fill="#c19a6b" font-weight="800" text-anchor="start" font-family="Inter, Arial, sans-serif">2 focuses</text><rect x="90" y="595" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="162.5" y="625" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">Reel 1</text><text x="248" y="626" font-size="24" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">+</text><rect x="260" y="595" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="332.5" y="625" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">Reel 2</text><text x="418" y="626" font-size="24" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">+</text><rect x="430" y="595" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="502.5" y="625" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">Reel 3</text><text x="910" y="626" font-size="18" fill="#c19a6b" font-weight="800" text-anchor="start" font-family="Inter, Arial, sans-serif">3 focuses</text><rect x="90" y="665" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="162.5" y="695" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">All Properties</text><text x="248" y="696" font-size="24" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">+</text><rect x="260" y="665" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="332.5" y="695" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">All Reels</text><text x="418" y="696" font-size="24" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">+</text><rect x="430" y="665" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="502.5" y="695" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">Instagram</text><text x="588" y="696" font-size="24" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">+</text><rect x="600" y="665" width="145" height="46" rx="12" fill="#c19a6b" fill-opacity="0.11" stroke="#c19a6b" stroke-width="1.8"/><text x="672.5" y="695" font-size="15" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial, sans-serif">YouTube</text><text x="910" y="696" font-size="18" fill="#c19a6b" font-weight="800" text-anchor="start" font-family="Inter, Arial, sans-serif">not one focus</text><text x="600" y="740" font-size="28" fill="#fff" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">One campaign focus = one specific objective at a time</text>
+</svg>

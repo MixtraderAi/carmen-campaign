@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coffeeGlow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#c19a6b" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#c19a6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #d4d4d8; font-weight: 600; font-family: Inter, Arial, sans-serif; }
+      .micro { font-size: 15px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .chip { font-size: 16px; font-weight: 700; letter-spacing: .08em; font-family: Inter, Arial, sans-serif; }
+    </style>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    </marker>
+    <marker id="arrowCoffee" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c19a6b" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="#09090b"/>
+  <rect width="1200" height="800" rx="34" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="800" rx="34" fill="url(#coffeeGlow)"/>
+  <text x="70" y="72" font-size="38" fill="#ffffff" class="title">One Revision Round</text>
+  <text x="70" y="106" font-size="22" fill="#a1a1aa" font-family="Inter, Arial, sans-serif">One complete feedback list, submitted once.</text>
+<text x="345" y="160" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">INCLUDED FLOW</text>
+    <rect x="70" y="210" width="210" height="72" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="98" y="246" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">1</text>
+    <text x="175.0" y="254.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Draft Package</text>
+    <path d="M286,246 L320,246" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/>
+    <rect x="330" y="210" width="210" height="72" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="358" y="246" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">2</text>
+    <text x="435.0" y="254.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">ONE Feedback List</text>
+    <path d="M546,246 L580,246" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/>
+    <rect x="590" y="210" width="210" height="72" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="618" y="246" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">3</text>
+    <text x="695.0" y="254.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">One Revision Round</text>
+    <path d="M806,246 L840,246" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/>
+    <rect x="850" y="210" width="210" height="72" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="878" y="246" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">4</text>
+    <text x="955.0" y="254.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Final Delivery</text>
+    <text x="380" y="395" font-size="20" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">NOT INCLUDED FLOW</text>
+    <rect x="90" y="450" width="200" height="66" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="190.0" y="491.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Comment today</text>
+    <text x="310" y="492" font-size="28" fill="#c19a6b" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">+</text>
+    <rect x="340" y="450" width="200" height="66" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="440.0" y="491.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">More tomorrow</text>
+    <text x="560" y="492" font-size="28" fill="#c19a6b" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">+</text>
+    <rect x="590" y="450" width="200" height="66" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="690.0" y="491.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">New cover idea</text>
+    <text x="810" y="492" font-size="28" fill="#c19a6b" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">+</text>
+    <rect x="840" y="450" width="200" height="66" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="940.0" y="491.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Change after approval</text>
+    <rect x="425" y="575" width="350" height="56" rx="18" fill="#f87171" fill-opacity="0.12" stroke="#f87171" stroke-width="2"/><text x="600" y="611" font-size="22" fill="#f87171" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Multiple rounds = additional service</text><text x="600" y="725" font-size="28" fill="#fff" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Feedback should be collected first, then sent once.</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coffeeGlow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#c19a6b" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#c19a6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #d4d4d8; font-weight: 600; font-family: Inter, Arial, sans-serif; }
+      .micro { font-size: 15px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .chip { font-size: 16px; font-weight: 700; letter-spacing: .08em; font-family: Inter, Arial, sans-serif; }
+    </style>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    </marker>
+    <marker id="arrowCoffee" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c19a6b" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="#09090b"/>
+  <rect width="1200" height="800" rx="34" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="800" rx="34" fill="url(#coffeeGlow)"/>
+  <text x="70" y="72" font-size="38" fill="#ffffff" class="title">One-Time Campaign Setup</text>
+  <text x="70" y="106" font-size="22" fill="#a1a1aa" font-family="Inter, Arial, sans-serif">Launch once, then stop. No ongoing management included.</text>
+
+    <rect x="85" y="310" width="120" height="86" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="145.0" y="361.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Goal</text>
+    <path d="M213,353 L245,353" stroke="#c19a6b" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCoffee)"/>
+    <rect x="250" y="310" width="120" height="86" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="310.0" y="361.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Audience</text>
+    <path d="M378,353 L410,353" stroke="#c19a6b" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCoffee)"/>
+    <rect x="420" y="310" width="120" height="86" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="480.0" y="361.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Ad Text</text>
+    <path d="M548,353 L580,353" stroke="#c19a6b" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCoffee)"/>
+    <rect x="590" y="310" width="120" height="86" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="650.0" y="361.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Creative</text>
+    <path d="M718,353 L750,353" stroke="#c19a6b" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCoffee)"/>
+    <rect x="760" y="310" width="120" height="86" rx="18" fill="#c19a6b" fill-opacity="0.10" stroke="#c19a6b" stroke-width="2"/>
+    
+    <text x="820.0" y="361.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Launch</text>
+    <rect x="930" y="272" width="160" height="160" rx="28" fill="#f87171" fill-opacity="0.14" stroke="#f87171" stroke-width="4"/><text x="1010" y="345" font-size="44" fill="#f87171" font-weight="900" text-anchor="middle" font-family="Inter, Arial, sans-serif">STOP</text><text x="1010" y="382" font-size="18" fill="#f87171" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">No ongoing</text>
+<text x="1010" y="410" font-size="18" fill="#f87171" font-weight="400" text-anchor="middle" font-family="Inter, Arial, sans-serif">management</text><path d="M885,353 L930,353" stroke="#c19a6b" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCoffee)"/><rect x="140" y="555" width="160" height="48" rx="14" fill="#27272a" fill-opacity="0.7" stroke="#52525b" stroke-opacity="0.6"/><text x="220" y="586" font-size="16" fill="#71717a" font-weight="600" text-anchor="middle" font-family="Inter, Arial, sans-serif">no monitoring</text><rect x="330" y="555" width="160" height="48" rx="14" fill="#27272a" fill-opacity="0.7" stroke="#52525b" stroke-opacity="0.6"/><text x="410" y="586" font-size="16" fill="#71717a" font-weight="600" text-anchor="middle" font-family="Inter, Arial, sans-serif">no optimization</text><rect x="520" y="555" width="160" height="48" rx="14" fill="#27272a" fill-opacity="0.7" stroke="#52525b" stroke-opacity="0.6"/><text x="600" y="586" font-size="16" fill="#71717a" font-weight="600" text-anchor="middle" font-family="Inter, Arial, sans-serif">no budget changes</text><rect x="710" y="555" width="160" height="48" rx="14" fill="#27272a" fill-opacity="0.7" stroke="#52525b" stroke-opacity="0.6"/><text x="790" y="586" font-size="16" fill="#71717a" font-weight="600" text-anchor="middle" font-family="Inter, Arial, sans-serif">no reports</text><rect x="900" y="555" width="160" height="48" rx="14" fill="#27272a" fill-opacity="0.7" stroke="#52525b" stroke-opacity="0.6"/><text x="980" y="586" font-size="16" fill="#71717a" font-weight="600" text-anchor="middle" font-family="Inter, Arial, sans-serif">no new creatives</text><text x="600" y="690" font-size="30" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">One-time setup = prepare + launch + handover</text>
+</svg>

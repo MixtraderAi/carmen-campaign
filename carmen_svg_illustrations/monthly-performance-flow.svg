@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coffeeGlow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#c19a6b" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#c19a6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #d4d4d8; font-weight: 600; font-family: Inter, Arial, sans-serif; }
+      .micro { font-size: 15px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .chip { font-size: 16px; font-weight: 700; letter-spacing: .08em; font-family: Inter, Arial, sans-serif; }
+    </style>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    </marker>
+    <marker id="arrowCoffee" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c19a6b" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="#09090b"/>
+  <rect width="1200" height="800" rx="34" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="800" rx="34" fill="url(#coffeeGlow)"/>
+  <text x="70" y="72" font-size="38" fill="#ffffff" class="title">Monthly Performance Workflow</text>
+  <text x="70" y="106" font-size="22" fill="#a1a1aa" font-family="Inter, Arial, sans-serif">Launch + basic monitoring + minor optimization during the month.</text>
+
+    <rect x="80" y="300" width="130" height="88" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="108" y="336" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">1</text>
+    <text x="145.0" y="352.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Confirm</text>
+    <text x="145" y="425" font-size="17" fill="#a1a1aa" font-weight="500" text-anchor="middle" font-family="Inter, Arial, sans-serif">One focus</text><path d="M218,344 L252,344" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/>
+    <rect x="260" y="300" width="130" height="88" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="288" y="336" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">2</text>
+    <text x="325.0" y="352.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Set Up</text>
+    <text x="325" y="425" font-size="17" fill="#a1a1aa" font-weight="500" text-anchor="middle" font-family="Inter, Arial, sans-serif">Campaign</text><path d="M398,344 L432,344" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/>
+    <rect x="440" y="300" width="130" height="88" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="468" y="336" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">3</text>
+    <text x="505.0" y="352.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Launch</text>
+    <text x="505" y="425" font-size="17" fill="#a1a1aa" font-weight="500" text-anchor="middle" font-family="Inter, Arial, sans-serif">Go live</text><path d="M578,344 L612,344" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/>
+    <rect x="620" y="300" width="130" height="88" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="648" y="336" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">4</text>
+    <text x="685.0" y="352.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Check</text>
+    <text x="685" y="425" font-size="17" fill="#a1a1aa" font-weight="500" text-anchor="middle" font-family="Inter, Arial, sans-serif">Basic performance</text><path d="M758,344 L792,344" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/>
+    <rect x="800" y="300" width="130" height="88" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="828" y="336" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">5</text>
+    <text x="865.0" y="352.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Adjust</text>
+    <text x="865" y="425" font-size="17" fill="#a1a1aa" font-weight="500" text-anchor="middle" font-family="Inter, Arial, sans-serif">Minor changes</text><path d="M938,344 L972,344" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/>
+    <rect x="980" y="300" width="130" height="88" rx="18" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="2"/>
+    <text x="1008" y="336" font-size="20" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial">6</text>
+    <text x="1045.0" y="352.0" font-size="20" fill="#d4d4d8" font-weight="650" text-anchor="middle" font-family="Inter, Arial">Review</text>
+    <text x="1045" y="425" font-size="17" fill="#a1a1aa" font-weight="500" text-anchor="middle" font-family="Inter, Arial, sans-serif">Basic summary</text><path d="M245,520 C420,600 780,600 955,520" fill="none" stroke="#22d3ee" stroke-width="3" stroke-dasharray="10 12" opacity="0.7"/><text x="600" y="655" font-size="30" fill="#22d3ee" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Monthly = we keep an eye on one campaign focus</text>
+</svg>

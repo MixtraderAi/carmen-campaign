@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coffeeGlow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#c19a6b" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#c19a6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #d4d4d8; font-weight: 600; font-family: Inter, Arial, sans-serif; }
+      .micro { font-size: 15px; fill: #a1a1aa; font-family: Inter, Arial, sans-serif; }
+      .chip { font-size: 16px; font-weight: 700; letter-spacing: .08em; font-family: Inter, Arial, sans-serif; }
+    </style>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    </marker>
+    <marker id="arrowCoffee" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c19a6b" stroke-width="2"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="#09090b"/>
+  <rect width="1200" height="800" rx="34" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="800" rx="34" fill="url(#coffeeGlow)"/>
+  <text x="70" y="72" font-size="38" fill="#ffffff" class="title">Price = Specific Scope</text>
+  <text x="70" y="106" font-size="22" fill="#a1a1aa" font-family="Inter, Arial, sans-serif">Each option has a clear boundary. Not unlimited support.</text>
+    <rect x="100" y="150" width="1000" height="84" rx="24" fill="#18181b" fill-opacity="0.62" stroke="#22d3ee" stroke-opacity="0.72" filter="url(#softShadow)"/>
+    <text x="320" y="202" font-size="28" fill="#22d3ee" font-weight="900" text-anchor="end" font-family="Inter, Arial, sans-serif">AED 250</text>
+    <text x="360" y="200" font-size="24" fill="#fff" font-weight="700" text-anchor="start" font-family="Inter, Arial, sans-serif">Channel setup</text>
+    <rect x="880" y="172" width="180" height="40" rx="20" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.45"/>
+    <text x="970" y="198" class="chip" fill="#22d3ee" text-anchor="middle">DEFINED SCOPE</text>
+
+    <rect x="100" y="260" width="1000" height="84" rx="24" fill="#18181b" fill-opacity="0.62" stroke="#22d3ee" stroke-opacity="0.72" filter="url(#softShadow)"/>
+    <text x="320" y="312" font-size="28" fill="#22d3ee" font-weight="900" text-anchor="end" font-family="Inter, Arial, sans-serif">AED 350</text>
+    <text x="360" y="310" font-size="24" fill="#fff" font-weight="700" text-anchor="start" font-family="Inter, Arial, sans-serif">Upload UniFilms video</text>
+    <rect x="880" y="282" width="180" height="40" rx="20" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.45"/>
+    <text x="970" y="308" class="chip" fill="#22d3ee" text-anchor="middle">DEFINED SCOPE</text>
+
+    <rect x="100" y="370" width="1000" height="84" rx="24" fill="#18181b" fill-opacity="0.62" stroke="#c19a6b" stroke-opacity="0.72" filter="url(#softShadow)"/>
+    <text x="320" y="422" font-size="28" fill="#c19a6b" font-weight="900" text-anchor="end" font-family="Inter, Arial, sans-serif">AED 450</text>
+    <text x="360" y="420" font-size="24" fill="#fff" font-weight="700" text-anchor="start" font-family="Inter, Arial, sans-serif">Upload client video</text>
+    <rect x="880" y="392" width="180" height="40" rx="20" fill="#c19a6b" fill-opacity="0.12" stroke="#c19a6b" stroke-opacity="0.45"/>
+    <text x="970" y="418" class="chip" fill="#c19a6b" text-anchor="middle">DEFINED SCOPE</text>
+
+    <rect x="100" y="480" width="1000" height="84" rx="24" fill="#18181b" fill-opacity="0.62" stroke="#c19a6b" stroke-opacity="0.72" filter="url(#softShadow)"/>
+    <text x="320" y="532" font-size="28" fill="#c19a6b" font-weight="900" text-anchor="end" font-family="Inter, Arial, sans-serif">AED 1,500</text>
+    <text x="360" y="530" font-size="24" fill="#fff" font-weight="700" text-anchor="start" font-family="Inter, Arial, sans-serif">Campaign launch only</text>
+    <rect x="880" y="502" width="180" height="40" rx="20" fill="#c19a6b" fill-opacity="0.12" stroke="#c19a6b" stroke-opacity="0.45"/>
+    <text x="970" y="528" class="chip" fill="#c19a6b" text-anchor="middle">DEFINED SCOPE</text>
+
+    <rect x="100" y="590" width="1000" height="84" rx="24" fill="#18181b" fill-opacity="0.62" stroke="#22d3ee" stroke-opacity="0.72" filter="url(#softShadow)"/>
+    <text x="320" y="642" font-size="28" fill="#22d3ee" font-weight="900" text-anchor="end" font-family="Inter, Arial, sans-serif">AED 2,000/mo</text>
+    <text x="360" y="640" font-size="24" fill="#fff" font-weight="700" text-anchor="start" font-family="Inter, Arial, sans-serif">One focus + basic management</text>
+    <rect x="880" y="612" width="180" height="40" rx="20" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.45"/>
+    <text x="970" y="638" class="chip" fill="#22d3ee" text-anchor="middle">DEFINED SCOPE</text>
+    <text x="600" y="730" font-size="29" fill="#c19a6b" font-weight="800" text-anchor="middle" font-family="Inter, Arial, sans-serif">Lower price = smaller scope, not unlimited work.</text>
+</svg>
